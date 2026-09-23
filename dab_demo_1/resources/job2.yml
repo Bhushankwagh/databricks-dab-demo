@@ -1,0 +1,17 @@
+resources:
+  jobs:
+    job2:
+      name: job2
+      tasks:
+        - task_key: job1
+          notebook_task:
+            notebook_path: /Repos/waghbk020801@gmail.com/databricks-dab-demo/dab_demo_1/src/notebook2
+            source: WORKSPACE
+          environment_key: Default
+      queue:
+        enabled: true
+      environments:
+        - environment_key: Default
+          spec:
+            environment_version: "5"
+      performance_target: PERFORMANCE_OPTIMIZED
